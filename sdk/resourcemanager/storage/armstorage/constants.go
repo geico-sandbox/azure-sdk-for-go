@@ -4,6 +4,10 @@
 
 package armstorage
 
+const (
+	version20260401 string = "2026-04-01"
+)
+
 // AccessTier - The default access tier for block blobs in the storage account. Required for storage accounts where kind =
 // BlobStorage. See more details in: https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview.
 type AccessTier string
@@ -13,6 +17,7 @@ const (
 	AccessTierCool    AccessTier = "Cool"
 	AccessTierHot     AccessTier = "Hot"
 	AccessTierPremium AccessTier = "Premium"
+	AccessTierSmart   AccessTier = "Smart"
 )
 
 // PossibleAccessTierValues returns the possible values for the AccessTier const type.
@@ -22,6 +27,7 @@ func PossibleAccessTierValues() []AccessTier {
 		AccessTierCool,
 		AccessTierHot,
 		AccessTierPremium,
+		AccessTierSmart,
 	}
 }
 
@@ -81,11 +87,48 @@ func PossibleActiveDirectoryPropertiesAccountTypeValues() []ActiveDirectoryPrope
 	}
 }
 
+// AdvancedPlatformMetricsFilterType - The type of filter applied to the advanced platform metrics rule.
+type AdvancedPlatformMetricsFilterType string
+
+const (
+	// AdvancedPlatformMetricsFilterTypeAllContainersFilter - Filter applies to all containers
+	AdvancedPlatformMetricsFilterTypeAllContainersFilter AdvancedPlatformMetricsFilterType = "AllContainersFilter"
+	// AdvancedPlatformMetricsFilterTypeContainerListFilter - Filter applies to a specific list of containers
+	AdvancedPlatformMetricsFilterTypeContainerListFilter AdvancedPlatformMetricsFilterType = "ContainerListFilter"
+	// AdvancedPlatformMetricsFilterTypeContainerPrefixFilter - Filter applies to containers matching a prefix
+	AdvancedPlatformMetricsFilterTypeContainerPrefixFilter AdvancedPlatformMetricsFilterType = "ContainerPrefixFilter"
+)
+
+// PossibleAdvancedPlatformMetricsFilterTypeValues returns the possible values for the AdvancedPlatformMetricsFilterType const type.
+func PossibleAdvancedPlatformMetricsFilterTypeValues() []AdvancedPlatformMetricsFilterType {
+	return []AdvancedPlatformMetricsFilterType{
+		AdvancedPlatformMetricsFilterTypeAllContainersFilter,
+		AdvancedPlatformMetricsFilterTypeContainerListFilter,
+		AdvancedPlatformMetricsFilterTypeContainerPrefixFilter,
+	}
+}
+
+// AdvancedPlatformMetricsRuleType - The type of the advanced platform metrics rule.
+type AdvancedPlatformMetricsRuleType string
+
+const (
+	// AdvancedPlatformMetricsRuleTypeContainerLevelCapacityMetrics - Container level capacity metrics rule type
+	AdvancedPlatformMetricsRuleTypeContainerLevelCapacityMetrics AdvancedPlatformMetricsRuleType = "ContainerLevelCapacityMetrics"
+)
+
+// PossibleAdvancedPlatformMetricsRuleTypeValues returns the possible values for the AdvancedPlatformMetricsRuleType const type.
+func PossibleAdvancedPlatformMetricsRuleTypeValues() []AdvancedPlatformMetricsRuleType {
+	return []AdvancedPlatformMetricsRuleType{
+		AdvancedPlatformMetricsRuleTypeContainerLevelCapacityMetrics,
+	}
+}
+
 // AllowedCopyScope - Restrict copy to and from Storage Accounts within an AAD tenant or with Private Links to the same VNet.
 type AllowedCopyScope string
 
 const (
 	AllowedCopyScopeAAD         AllowedCopyScope = "AAD"
+	AllowedCopyScopeAll         AllowedCopyScope = "All"
 	AllowedCopyScopePrivateLink AllowedCopyScope = "PrivateLink"
 )
 
@@ -93,6 +136,7 @@ const (
 func PossibleAllowedCopyScopeValues() []AllowedCopyScope {
 	return []AllowedCopyScope{
 		AllowedCopyScopeAAD,
+		AllowedCopyScopeAll,
 		AllowedCopyScopePrivateLink,
 	}
 }
@@ -755,6 +799,24 @@ func PossibleManagementPolicyNameValues() []ManagementPolicyName {
 	}
 }
 
+// MetricsEmitted - The metrics emitted by the advanced platform metrics rule.
+type MetricsEmitted string
+
+const (
+	// MetricsEmittedContainerBlobCount - Container blob count metric
+	MetricsEmittedContainerBlobCount MetricsEmitted = "ContainerBlobCount"
+	// MetricsEmittedContainerUsedSize - Container used size metric
+	MetricsEmittedContainerUsedSize MetricsEmitted = "ContainerUsedSize"
+)
+
+// PossibleMetricsEmittedValues returns the possible values for the MetricsEmitted const type.
+func PossibleMetricsEmittedValues() []MetricsEmitted {
+	return []MetricsEmitted{
+		MetricsEmittedContainerBlobCount,
+		MetricsEmittedContainerUsedSize,
+	}
+}
+
 type MigrationName string
 
 const (
@@ -807,7 +869,7 @@ func PossibleMigrationStatusValues() []MigrationStatus {
 }
 
 // MinimumTLSVersion - Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS
-// 1.0 for this property.
+// 1.0 for this property. Minimum TLS version 1.3 version is not supported.
 type MinimumTLSVersion string
 
 const (
@@ -838,6 +900,36 @@ const (
 func PossibleNameValues() []Name {
 	return []Name{
 		NameAccessTimeTracking,
+	}
+}
+
+// NativeDataSharingProvisioningState - Provisioning state of the resource at the time the operation was called.
+type NativeDataSharingProvisioningState string
+
+const (
+	// NativeDataSharingProvisioningStateAccepted - The request has been accepted for processing.
+	NativeDataSharingProvisioningStateAccepted NativeDataSharingProvisioningState = "Accepted"
+	// NativeDataSharingProvisioningStateCanceled - The request has been canceled.
+	NativeDataSharingProvisioningStateCanceled NativeDataSharingProvisioningState = "Canceled"
+	// NativeDataSharingProvisioningStateCreating - The resource is being created.
+	NativeDataSharingProvisioningStateCreating NativeDataSharingProvisioningState = "Creating"
+	// NativeDataSharingProvisioningStateDeleting - The resource is being deleted.
+	NativeDataSharingProvisioningStateDeleting NativeDataSharingProvisioningState = "Deleting"
+	// NativeDataSharingProvisioningStateFailed - The resource creation or deletion has failed.
+	NativeDataSharingProvisioningStateFailed NativeDataSharingProvisioningState = "Failed"
+	// NativeDataSharingProvisioningStateSucceeded - The resource has been successfully created.
+	NativeDataSharingProvisioningStateSucceeded NativeDataSharingProvisioningState = "Succeeded"
+)
+
+// PossibleNativeDataSharingProvisioningStateValues returns the possible values for the NativeDataSharingProvisioningState const type.
+func PossibleNativeDataSharingProvisioningStateValues() []NativeDataSharingProvisioningState {
+	return []NativeDataSharingProvisioningState{
+		NativeDataSharingProvisioningStateAccepted,
+		NativeDataSharingProvisioningStateCanceled,
+		NativeDataSharingProvisioningStateCreating,
+		NativeDataSharingProvisioningStateDeleting,
+		NativeDataSharingProvisioningStateFailed,
+		NativeDataSharingProvisioningStateSucceeded,
 	}
 }
 
@@ -1415,6 +1507,102 @@ func PossibleStorageAccountExpandValues() []StorageAccountExpand {
 	}
 }
 
+// StorageConnectorAuthType - The auth type supported for bucket connection in storage connector.
+type StorageConnectorAuthType string
+
+const (
+	// StorageConnectorAuthTypeManagedIdentity - Managed Identity auth type
+	StorageConnectorAuthTypeManagedIdentity StorageConnectorAuthType = "ManagedIdentity"
+)
+
+// PossibleStorageConnectorAuthTypeValues returns the possible values for the StorageConnectorAuthType const type.
+func PossibleStorageConnectorAuthTypeValues() []StorageConnectorAuthType {
+	return []StorageConnectorAuthType{
+		StorageConnectorAuthTypeManagedIdentity,
+	}
+}
+
+// StorageConnectorConnectionType - The connection type for bucket connection in storage connector.
+type StorageConnectorConnectionType string
+
+const (
+	// StorageConnectorConnectionTypeDataShare - DataShare connection type
+	StorageConnectorConnectionTypeDataShare StorageConnectorConnectionType = "DataShare"
+)
+
+// PossibleStorageConnectorConnectionTypeValues returns the possible values for the StorageConnectorConnectionType const type.
+func PossibleStorageConnectorConnectionTypeValues() []StorageConnectorConnectionType {
+	return []StorageConnectorConnectionType{
+		StorageConnectorConnectionTypeDataShare,
+	}
+}
+
+// StorageConnectorDataSourceType - The type of the backing data source for storage connector
+type StorageConnectorDataSourceType string
+
+const (
+	// StorageConnectorDataSourceTypeAzureDataShare - Azure DataShare data source type.
+	StorageConnectorDataSourceTypeAzureDataShare StorageConnectorDataSourceType = "Azure_DataShare"
+)
+
+// PossibleStorageConnectorDataSourceTypeValues returns the possible values for the StorageConnectorDataSourceType const type.
+func PossibleStorageConnectorDataSourceTypeValues() []StorageConnectorDataSourceType {
+	return []StorageConnectorDataSourceType{
+		StorageConnectorDataSourceTypeAzureDataShare,
+	}
+}
+
+// StorageConnectorSourceType - The type of the backing data source for storage connector
+type StorageConnectorSourceType string
+
+const (
+	// StorageConnectorSourceTypeDataShare - Source type - DataShare
+	StorageConnectorSourceTypeDataShare StorageConnectorSourceType = "DataShare"
+)
+
+// PossibleStorageConnectorSourceTypeValues returns the possible values for the StorageConnectorSourceType const type.
+func PossibleStorageConnectorSourceTypeValues() []StorageConnectorSourceType {
+	return []StorageConnectorSourceType{
+		StorageConnectorSourceTypeDataShare,
+	}
+}
+
+// StorageConnectorState - The state of the storage connector
+type StorageConnectorState string
+
+const (
+	// StorageConnectorStateActive - Whether the connector is active
+	StorageConnectorStateActive StorageConnectorState = "Active"
+	// StorageConnectorStateInactive - Whether the connector is inactive
+	StorageConnectorStateInactive StorageConnectorState = "Inactive"
+)
+
+// PossibleStorageConnectorStateValues returns the possible values for the StorageConnectorState const type.
+func PossibleStorageConnectorStateValues() []StorageConnectorState {
+	return []StorageConnectorState{
+		StorageConnectorStateActive,
+		StorageConnectorStateInactive,
+	}
+}
+
+// StorageDataShareAccessPolicyPermission - The permissions supported in access policies for storage data share
+type StorageDataShareAccessPolicyPermission string
+
+const (
+	// StorageDataShareAccessPolicyPermissionNone - No permission
+	StorageDataShareAccessPolicyPermissionNone StorageDataShareAccessPolicyPermission = "None"
+	// StorageDataShareAccessPolicyPermissionRead - Read permission
+	StorageDataShareAccessPolicyPermissionRead StorageDataShareAccessPolicyPermission = "Read"
+)
+
+// PossibleStorageDataShareAccessPolicyPermissionValues returns the possible values for the StorageDataShareAccessPolicyPermission const type.
+func PossibleStorageDataShareAccessPolicyPermissionValues() []StorageDataShareAccessPolicyPermission {
+	return []StorageDataShareAccessPolicyPermission{
+		StorageDataShareAccessPolicyPermissionNone,
+		StorageDataShareAccessPolicyPermissionRead,
+	}
+}
+
 // StorageTaskAssignmentProvisioningState - Gets the status of the storage account at the time the operation was called.
 type StorageTaskAssignmentProvisioningState string
 
@@ -1447,6 +1635,8 @@ func PossibleStorageTaskAssignmentProvisioningStateValues() []StorageTaskAssignm
 type TriggerType string
 
 const (
+	// TriggerTypeMockRun - Run the task as a mock for testing
+	TriggerTypeMockRun    TriggerType = "MockRun"
 	TriggerTypeOnSchedule TriggerType = "OnSchedule"
 	TriggerTypeRunOnce    TriggerType = "RunOnce"
 )
@@ -1454,6 +1644,7 @@ const (
 // PossibleTriggerTypeValues returns the possible values for the TriggerType const type.
 func PossibleTriggerTypeValues() []TriggerType {
 	return []TriggerType{
+		TriggerTypeMockRun,
 		TriggerTypeOnSchedule,
 		TriggerTypeRunOnce,
 	}

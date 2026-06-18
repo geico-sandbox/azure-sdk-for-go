@@ -114,6 +114,29 @@ type AccountsClientUpdateOptions struct {
 	// placeholder for future optional parameters
 }
 
+// AdvancedPlatformMetricsClientCreateOrUpdateOptions contains the optional parameters for the AdvancedPlatformMetricsClient.CreateOrUpdate
+// method.
+type AdvancedPlatformMetricsClientCreateOrUpdateOptions struct {
+	// placeholder for future optional parameters
+}
+
+// AdvancedPlatformMetricsClientDeleteOptions contains the optional parameters for the AdvancedPlatformMetricsClient.Delete
+// method.
+type AdvancedPlatformMetricsClientDeleteOptions struct {
+	// placeholder for future optional parameters
+}
+
+// AdvancedPlatformMetricsClientGetOptions contains the optional parameters for the AdvancedPlatformMetricsClient.Get method.
+type AdvancedPlatformMetricsClientGetOptions struct {
+	// placeholder for future optional parameters
+}
+
+// AdvancedPlatformMetricsClientListOptions contains the optional parameters for the AdvancedPlatformMetricsClient.NewListPager
+// method.
+type AdvancedPlatformMetricsClientListOptions struct {
+	// placeholder for future optional parameters
+}
+
 // BlobContainersClientBeginObjectLevelWormOptions contains the optional parameters for the BlobContainersClient.BeginObjectLevelWorm
 // method.
 type BlobContainersClientBeginObjectLevelWormOptions struct {
@@ -241,6 +264,71 @@ type BlobServicesClientListOptions struct {
 // BlobServicesClientSetServicePropertiesOptions contains the optional parameters for the BlobServicesClient.SetServiceProperties
 // method.
 type BlobServicesClientSetServicePropertiesOptions struct {
+	// placeholder for future optional parameters
+}
+
+// ConnectorsClientBeginCreateOptions contains the optional parameters for the ConnectorsClient.BeginCreate method.
+type ConnectorsClientBeginCreateOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// ConnectorsClientBeginDeleteOptions contains the optional parameters for the ConnectorsClient.BeginDelete method.
+type ConnectorsClientBeginDeleteOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// ConnectorsClientBeginTestExistingConnectionOptions contains the optional parameters for the ConnectorsClient.BeginTestExistingConnection
+// method.
+type ConnectorsClientBeginTestExistingConnectionOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// ConnectorsClientBeginUpdateOptions contains the optional parameters for the ConnectorsClient.BeginUpdate method.
+type ConnectorsClientBeginUpdateOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// ConnectorsClientGetOptions contains the optional parameters for the ConnectorsClient.Get method.
+type ConnectorsClientGetOptions struct {
+	// placeholder for future optional parameters
+}
+
+// ConnectorsClientListByStorageAccountOptions contains the optional parameters for the ConnectorsClient.NewListByStorageAccountPager
+// method.
+type ConnectorsClientListByStorageAccountOptions struct {
+	// placeholder for future optional parameters
+}
+
+// DataSharesClientBeginCreateOptions contains the optional parameters for the DataSharesClient.BeginCreate method.
+type DataSharesClientBeginCreateOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// DataSharesClientBeginDeleteOptions contains the optional parameters for the DataSharesClient.BeginDelete method.
+type DataSharesClientBeginDeleteOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// DataSharesClientBeginUpdateOptions contains the optional parameters for the DataSharesClient.BeginUpdate method.
+type DataSharesClientBeginUpdateOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// DataSharesClientGetOptions contains the optional parameters for the DataSharesClient.Get method.
+type DataSharesClientGetOptions struct {
+	// placeholder for future optional parameters
+}
+
+// DataSharesClientListByStorageAccountOptions contains the optional parameters for the DataSharesClient.NewListByStorageAccountPager
+// method.
+type DataSharesClientListByStorageAccountOptions struct {
 	// placeholder for future optional parameters
 }
 
@@ -616,6 +704,13 @@ type TaskAssignmentsClientBeginCreateOptions struct {
 
 // TaskAssignmentsClientBeginDeleteOptions contains the optional parameters for the TaskAssignmentsClient.BeginDelete method.
 type TaskAssignmentsClientBeginDeleteOptions struct {
+	// Resumes the long-running operation from the provided token.
+	ResumeToken string
+}
+
+// TaskAssignmentsClientBeginStopAssignmentOptions contains the optional parameters for the TaskAssignmentsClient.BeginStopAssignment
+// method.
+type TaskAssignmentsClientBeginStopAssignmentOptions struct {
 	// Resumes the long-running operation from the provided token.
 	ResumeToken string
 }

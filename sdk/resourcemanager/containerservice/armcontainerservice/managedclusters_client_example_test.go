@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersAbortOperation.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersAbortOperation.json
 func ExampleManagedClustersClient_BeginAbortLatestOperation() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -30,11 +30,11 @@ func ExampleManagedClustersClient_BeginAbortLatestOperation() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/AdvancedNetworkingTransitEncryption.json
+// Generated from example definition: 2026-04-02-preview/AdvancedNetworkingTransitEncryption.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAdvancedNetworkingTransitEncryption() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -117,13 +117,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAd
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -218,7 +218,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAd
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersAssociate_CRG.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersAssociate_CRG.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_associateManagedClusterWithCapacityReservationGroup() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -295,13 +295,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_associateManagedClusterWit
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -393,7 +393,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_associateManagedClusterWit
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_AzureKeyvaultSecretsProvider.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_AzureKeyvaultSecretsProvider.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAzureKeyVaultSecretsProviderAddon() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -477,13 +477,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAz
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -574,7 +574,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAz
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_AzureServiceMesh.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_AzureServiceMesh.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedClusterWithAzureServiceMesh() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -686,13 +686,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -814,7 +814,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_ControlPlaneScalingProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_ControlPlaneScalingProfile.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithControlPlaneScalingProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -880,13 +880,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithCo
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -973,7 +973,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithCo
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_CustomCATrustCertificates.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_CustomCATrustCertificates.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithCustomCaTrustCertificatesPopulated() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -1054,13 +1054,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithCu
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -1156,7 +1156,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithCu
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_DedicatedHostGroup.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_DedicatedHostGroup.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithDedicatedHostGroup() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -1232,13 +1232,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithDe
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -1329,7 +1329,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithDe
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_DisableRunCommand.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_DisableRunCommand.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithRunCommandDisabled() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -1408,13 +1408,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithRu
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -1510,7 +1510,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithRu
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_DualStackNetworking.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_DualStackNetworking.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedClusterWithDualStackNetworking() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -1607,13 +1607,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -1731,7 +1731,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_EnableAIToolchainOperator.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_EnableAIToolchainOperator.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAiToolchainOperatorEnabled() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -1804,13 +1804,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAi
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -1895,7 +1895,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAi
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_EnableEncryptionAtHost.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_EnableEncryptionAtHost.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithEncryptionAtHostEnabled() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -1972,13 +1972,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithEn
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -2070,7 +2070,158 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithEn
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_EnableUltraSSD.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_EnableManagedBastion.json
+func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateClusterWithManagedBastion() {
+	cred, err := azidentity.NewDefaultAzureCredential(nil)
+	if err != nil {
+		log.Fatalf("failed to obtain a credential: %v", err)
+	}
+	ctx := context.Background()
+	clientFactory, err := armcontainerservice.NewClientFactory("00000000-0000-0000-0000-000000000000", cred, nil)
+	if err != nil {
+		log.Fatalf("failed to create client: %v", err)
+	}
+	poller, err := clientFactory.NewManagedClustersClient().BeginCreateOrUpdate(ctx, "rg1", "clustername1", armcontainerservice.ManagedCluster{
+		Location: to.Ptr("location1"),
+		Properties: &armcontainerservice.ManagedClusterProperties{
+			AddonProfiles: map[string]*armcontainerservice.ManagedClusterAddonProfile{},
+			AgentPoolProfiles: []*armcontainerservice.ManagedClusterAgentPoolProfile{
+				{
+					Name:                   to.Ptr("nodepool1"),
+					Type:                   to.Ptr(armcontainerservice.AgentPoolTypeVirtualMachineScaleSets),
+					Count:                  to.Ptr[int32](3),
+					EnableEncryptionAtHost: to.Ptr(true),
+					Mode:                   to.Ptr(armcontainerservice.AgentPoolModeSystem),
+					OSType:                 to.Ptr(armcontainerservice.OSTypeLinux),
+					VMSize:                 to.Ptr("Standard_DS2_v2"),
+				},
+			},
+			APIServerAccessProfile: &armcontainerservice.ManagedClusterAPIServerAccessProfile{
+				EnablePrivateCluster: to.Ptr(true),
+			},
+			AutoScalerProfile: &armcontainerservice.ManagedClusterPropertiesAutoScalerProfile{
+				ScaleDownDelayAfterAdd: to.Ptr("15m"),
+				ScanInterval:           to.Ptr("20s"),
+			},
+			DNSPrefix:         to.Ptr("dnsprefix1"),
+			KubernetesVersion: to.Ptr(""),
+			LinuxProfile: &armcontainerservice.LinuxProfile{
+				AdminUsername: to.Ptr("azureuser"),
+				SSH: &armcontainerservice.SSHConfiguration{
+					PublicKeys: []*armcontainerservice.SSHPublicKey{
+						{
+							KeyData: to.Ptr("keydata"),
+						},
+					},
+				},
+			},
+			NetworkProfile: &armcontainerservice.NetworkProfile{
+				BastionProfile: &armcontainerservice.BastionProfile{
+					Enabled:    to.Ptr(true),
+					SKU:        to.Ptr(armcontainerservice.BastionSKUPremium),
+					ScaleUnits: to.Ptr[int32](3),
+				},
+			},
+			ServicePrincipalProfile: &armcontainerservice.ManagedClusterServicePrincipalProfile{
+				ClientID: to.Ptr("clientid"),
+				Secret:   to.Ptr("secret"),
+			},
+			WindowsProfile: &armcontainerservice.ManagedClusterWindowsProfile{
+				AdminPassword: to.Ptr("replacePassword1234$"),
+				AdminUsername: to.Ptr("azureuser"),
+			},
+		},
+		SKU: &armcontainerservice.ManagedClusterSKU{
+			Name: to.Ptr(armcontainerservice.ManagedClusterSKUName("Basic")),
+			Tier: to.Ptr(armcontainerservice.ManagedClusterSKUTierFree),
+		},
+		Tags: map[string]*string{
+			"archv2": to.Ptr(""),
+			"tier":   to.Ptr("production"),
+		},
+	}, nil)
+	if err != nil {
+		log.Fatalf("failed to finish the request: %v", err)
+	}
+	res, err := poller.PollUntilDone(ctx, nil)
+	if err != nil {
+		log.Fatalf("failed to poll the result: %v", err)
+	}
+	// You could use response here. We use blank identifier for just demo purposes.
+	_ = res
+	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
+	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
+	// 		Name: to.Ptr("clustername1"),
+	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
+	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
+	// 		Location: to.Ptr("location1"),
+	// 		Properties: &armcontainerservice.ManagedClusterProperties{
+	// 			AgentPoolProfiles: []*armcontainerservice.ManagedClusterAgentPoolProfile{
+	// 				{
+	// 					Name: to.Ptr("nodepool1"),
+	// 					Type: to.Ptr(armcontainerservice.AgentPoolTypeVirtualMachineScaleSets),
+	// 					Count: to.Ptr[int32](3),
+	// 					CurrentOrchestratorVersion: to.Ptr("1.9.6"),
+	// 					EnableEncryptionAtHost: to.Ptr(true),
+	// 					MaxPods: to.Ptr[int32](110),
+	// 					Mode: to.Ptr(armcontainerservice.AgentPoolModeSystem),
+	// 					NodeImageVersion: to.Ptr("AKSUbuntu:1604:2020.03.11"),
+	// 					OrchestratorVersion: to.Ptr("1.9.6"),
+	// 					OSType: to.Ptr(armcontainerservice.OSTypeLinux),
+	// 					ProvisioningState: to.Ptr("Succeeded"),
+	// 					VMSize: to.Ptr("Standard_DS2_v2"),
+	// 				},
+	// 			},
+	// 			APIServerAccessProfile: &armcontainerservice.ManagedClusterAPIServerAccessProfile{
+	// 				EnablePrivateCluster: to.Ptr(true),
+	// 				PrivateDNSZone: to.Ptr("system"),
+	// 			},
+	// 			AutoScalerProfile: &armcontainerservice.ManagedClusterPropertiesAutoScalerProfile{
+	// 				ScaleDownDelayAfterAdd: to.Ptr("15m"),
+	// 				ScanInterval: to.Ptr("20s"),
+	// 			},
+	// 			DNSPrefix: to.Ptr("dnsprefix1"),
+	// 			KubernetesVersion: to.Ptr("1.9.6"),
+	// 			LinuxProfile: &armcontainerservice.LinuxProfile{
+	// 				AdminUsername: to.Ptr("azureuser"),
+	// 				SSH: &armcontainerservice.SSHConfiguration{
+	// 					PublicKeys: []*armcontainerservice.SSHPublicKey{
+	// 						{
+	// 							KeyData: to.Ptr("keydata"),
+	// 						},
+	// 					},
+	// 				},
+	// 			},
+	// 			MaxAgentPools: to.Ptr[int32](1),
+	// 			NetworkProfile: &armcontainerservice.NetworkProfile{
+	// 				BastionProfile: &armcontainerservice.BastionProfile{
+	// 					Enabled: to.Ptr(true),
+	// 					BastionID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MC_rg1/providers/Microsoft.Network/bastionHosts/bastionhost1"),
+	// 					SKU: to.Ptr(armcontainerservice.BastionSKUPremium),
+	// 					ScaleUnits: to.Ptr[int32](3),
+	// 					PublicIPAddressID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MC_rg1/providers/Microsoft.Network/publicIPAddresses/bastionPublicIP1"),
+	// 				},
+	// 			},
+	// 			NodeResourceGroup: to.Ptr("MC_rg1_clustername1_location1"),
+	// 			PrivateFQDN: to.Ptr("dnsprefix1-aae7e0f0.5cef6058-b6b5-414d-8cb1-4bd14eb0b15c.privatelink.location1.azmk8s.io"),
+	// 			ProvisioningState: to.Ptr("Succeeded"),
+	// 			ServicePrincipalProfile: &armcontainerservice.ManagedClusterServicePrincipalProfile{
+	// 				ClientID: to.Ptr("clientid"),
+	// 			},
+	// 			WindowsProfile: &armcontainerservice.ManagedClusterWindowsProfile{
+	// 				AdminUsername: to.Ptr("azureuser"),
+	// 			},
+	// 		},
+	// 		Tags: map[string]*string{
+	// 			"archv2": to.Ptr(""),
+	// 			"tier": to.Ptr("production"),
+	// 		},
+	// 	},
+	// }
+}
+
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_EnableUltraSSD.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithUltraSsdEnabled() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -2147,13 +2298,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithUl
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -2245,7 +2396,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithUl
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_EnabledFIPS.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_EnabledFIPS.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithFipsEnabledOS() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -2322,13 +2473,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithFi
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -2420,7 +2571,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithFi
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_GPUMIG.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_GPUMIG.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithGpumig() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -2506,13 +2657,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithGp
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -2613,7 +2764,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithGp
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_HTTPProxy.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_HTTPProxy.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithHttpProxyConfigured() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -2698,13 +2849,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithHt
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -2804,7 +2955,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithHt
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_IngressProfile_ApplicationLoadBalancer.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_IngressProfile_ApplicationLoadBalancer.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithApplicationLoadBalancerProfileConfigured() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -2870,13 +3021,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAp
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -2970,7 +3121,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAp
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_IngressProfile_WebAppRouting.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_IngressProfile_WebAppRouting.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithWebAppRoutingIngressProfileConfigured() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -3039,13 +3190,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithWe
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -3139,7 +3290,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithWe
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_MCSnapshot.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_MCSnapshot.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterUsingAManagedClusterSnapshot() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -3199,13 +3350,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterUsingA
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -3291,7 +3442,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterUsingA
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_ManagedNATGateway.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_ManagedNATGateway.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAksManagedNatGatewayAsOutboundType() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -3367,13 +3518,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAk
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -3454,7 +3605,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithAk
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_NodeAutoProvisioning.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_NodeAutoProvisioning.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithNodeAutoProvisioning() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -3524,13 +3675,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithNo
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -3612,7 +3763,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithNo
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_NodePublicIPPrefix.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_NodePublicIPPrefix.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithNodePublicIPPrefix() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -3689,13 +3840,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithNo
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -3787,7 +3938,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithNo
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_OSSKU.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_OSSKU.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithOssku() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -3873,13 +4024,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithOs
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -3980,7 +4131,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithOs
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_PPG.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_PPG.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithPpg() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -4057,13 +4208,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithPp
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -4155,7 +4306,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithPp
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_PodIdentity.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_PodIdentity.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithPodIdentityEnabled() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -4235,13 +4386,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithPo
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -4336,7 +4487,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithPo
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_Premium.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_Premium.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithLongTermSupport() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -4416,13 +4567,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithLo
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -4522,7 +4673,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithLo
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_PrivateClusterFQDNSubdomain.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_PrivateClusterFQDNSubdomain.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateClusterWithFqdnSubdomainSpecified() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -4602,13 +4753,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateCluste
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -4703,7 +4854,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateCluste
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_PrivateClusterPublicFQDN.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_PrivateClusterPublicFQDN.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateClusterWithPublicFqdnSpecified() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -4783,13 +4934,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateCluste
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -4886,7 +5037,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedPrivateCluste
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_SecurityProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_SecurityProfile.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithSecurityProfileConfigured() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -4968,13 +5119,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithSe
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -5082,7 +5233,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithSe
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_Snapshot.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_Snapshot.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterUsingAnAgentPoolSnapshot() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -5162,13 +5313,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterUsingA
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -5263,7 +5414,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterUsingA
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_Update.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_Update.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -5362,13 +5513,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -5485,7 +5636,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_UpdateWindowsGmsa.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_UpdateWindowsGmsa.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedClusterWithWindowsGMsaEnabled() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -5575,13 +5726,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -5689,7 +5840,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_UpdateWithAHUB.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_UpdateWithAHUB.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedClusterWithEnableAhub() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -5777,13 +5928,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -5889,7 +6040,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_UpdateWithEnableAzureRBAC.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_UpdateWithEnableAzureRBAC.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateAadManagedClusterWithEnableAzureRbac() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -5974,13 +6125,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateAadManagedClus
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -6081,7 +6232,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateAadManagedClus
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_UpdateWithEnableNamespaceResources.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_UpdateWithEnableNamespaceResources.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedClusterWithEnableNamespaceResources() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6163,13 +6314,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -6266,7 +6417,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createUpdateManagedCluster
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_UserAssignedNATGateway.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_UserAssignedNATGateway.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithUserAssignedNatGatewayAsOutboundType() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6337,13 +6488,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithUs
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -6410,7 +6561,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithUs
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersCreate_VirtualMachines.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersCreate_VirtualMachines.json
 func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithVirtualMachinesPoolType() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6478,13 +6629,13 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithVi
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientCreateOrUpdateResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),
@@ -6568,7 +6719,7 @@ func ExampleManagedClustersClient_BeginCreateOrUpdate_createManagedClusterWithVi
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersDelete.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersDelete.json
 func ExampleManagedClustersClient_BeginDelete() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6585,11 +6736,11 @@ func ExampleManagedClustersClient_BeginDelete() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersGet.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersGet.json
 func ExampleManagedClustersClient_Get() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6608,7 +6759,7 @@ func ExampleManagedClustersClient_Get() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ETag: to.Ptr("beywbwei"),
@@ -6713,7 +6864,7 @@ func ExampleManagedClustersClient_Get() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersGetAccessProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersGetAccessProfile.json
 func ExampleManagedClustersClient_GetAccessProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6732,7 +6883,7 @@ func ExampleManagedClustersClient_GetAccessProfile() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetAccessProfileResponse{
-	// 	ManagedClusterAccessProfile: &armcontainerservice.ManagedClusterAccessProfile{
+	// 	ManagedClusterAccessProfile: armcontainerservice.ManagedClusterAccessProfile{
 	// 		Name: to.Ptr("clusterUser"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters/accessProfiles"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/accessProfiles/clusterUser"),
@@ -6744,7 +6895,7 @@ func ExampleManagedClustersClient_GetAccessProfile() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/RunCommandResultFailed.json
+// Generated from example definition: 2026-04-02-preview/RunCommandResultFailed.json
 func ExampleManagedClustersClient_GetCommandResult_commandFailedResult() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6763,7 +6914,7 @@ func ExampleManagedClustersClient_GetCommandResult_commandFailedResult() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetCommandResultResponse{
-	// 	RunCommandResult: &armcontainerservice.RunCommandResult{
+	// 	RunCommandResult: armcontainerservice.RunCommandResult{
 	// 		ID: to.Ptr("def7b3ea71bd4f7e9d226ddbc0f00ad9"),
 	// 		Properties: &armcontainerservice.CommandResultProperties{
 	// 			ProvisioningState: to.Ptr("failed"),
@@ -6773,7 +6924,7 @@ func ExampleManagedClustersClient_GetCommandResult_commandFailedResult() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/RunCommandResultSucceed.json
+// Generated from example definition: 2026-04-02-preview/RunCommandResultSucceed.json
 func ExampleManagedClustersClient_GetCommandResult_commandSucceedResult() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6792,7 +6943,7 @@ func ExampleManagedClustersClient_GetCommandResult_commandSucceedResult() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetCommandResultResponse{
-	// 	RunCommandResult: &armcontainerservice.RunCommandResult{
+	// 	RunCommandResult: armcontainerservice.RunCommandResult{
 	// 		ID: to.Ptr("def7b3ea71bd4f7e9d226ddbc0f00ad9"),
 	// 		Properties: &armcontainerservice.CommandResultProperties{
 	// 			ExitCode: to.Ptr[int32](0),
@@ -6805,7 +6956,7 @@ func ExampleManagedClustersClient_GetCommandResult_commandSucceedResult() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/GetGuardrailsVersions.json
+// Generated from example definition: 2026-04-02-preview/GetGuardrailsVersions.json
 func ExampleManagedClustersClient_GetGuardrailsVersions() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6824,7 +6975,7 @@ func ExampleManagedClustersClient_GetGuardrailsVersions() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetGuardrailsVersionsResponse{
-	// 	GuardrailsAvailableVersion: &armcontainerservice.GuardrailsAvailableVersion{
+	// 	GuardrailsAvailableVersion: armcontainerservice.GuardrailsAvailableVersion{
 	// 		Name: to.Ptr("v1.0.0"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/locations/guardrailsVersions"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ContainerService/locations/location1/guardrailsVersions/v1.0.0"),
@@ -6836,7 +6987,7 @@ func ExampleManagedClustersClient_GetGuardrailsVersions() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersGet_MeshRevisionProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersGet_MeshRevisionProfile.json
 func ExampleManagedClustersClient_GetMeshRevisionProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6855,7 +7006,7 @@ func ExampleManagedClustersClient_GetMeshRevisionProfile() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetMeshRevisionProfileResponse{
-	// 	MeshRevisionProfile: &armcontainerservice.MeshRevisionProfile{
+	// 	MeshRevisionProfile: armcontainerservice.MeshRevisionProfile{
 	// 		Name: to.Ptr("istio"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/locations/meshRevisionProfiles"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ContainerService/locations/location1/meshRevisionProfiles/istio"),
@@ -6900,7 +7051,7 @@ func ExampleManagedClustersClient_GetMeshRevisionProfile() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersGet_MeshUpgradeProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersGet_MeshUpgradeProfile.json
 func ExampleManagedClustersClient_GetMeshUpgradeProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6919,7 +7070,7 @@ func ExampleManagedClustersClient_GetMeshUpgradeProfile() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetMeshUpgradeProfileResponse{
-	// 	MeshUpgradeProfile: &armcontainerservice.MeshUpgradeProfile{
+	// 	MeshUpgradeProfile: armcontainerservice.MeshUpgradeProfile{
 	// 		Name: to.Ptr("istio"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters/meshUpgradeProfiles"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/meshUpgradeProfiles/istio"),
@@ -6944,7 +7095,7 @@ func ExampleManagedClustersClient_GetMeshUpgradeProfile() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/GetSafeguardsVersions.json
+// Generated from example definition: 2026-04-02-preview/GetSafeguardsVersions.json
 func ExampleManagedClustersClient_GetSafeguardsVersions() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6963,7 +7114,7 @@ func ExampleManagedClustersClient_GetSafeguardsVersions() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetSafeguardsVersionsResponse{
-	// 	SafeguardsAvailableVersion: &armcontainerservice.SafeguardsAvailableVersion{
+	// 	SafeguardsAvailableVersion: armcontainerservice.SafeguardsAvailableVersion{
 	// 		Name: to.Ptr("v1.0.0"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/locations/safeguardsVersions"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ContainerService/locations/location1/safeguardsVersions/v1.0.0"),
@@ -6975,7 +7126,7 @@ func ExampleManagedClustersClient_GetSafeguardsVersions() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersGetUpgradeProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersGetUpgradeProfile.json
 func ExampleManagedClustersClient_GetUpgradeProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -6994,7 +7145,7 @@ func ExampleManagedClustersClient_GetUpgradeProfile() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientGetUpgradeProfileResponse{
-	// 	ManagedClusterUpgradeProfile: &armcontainerservice.ManagedClusterUpgradeProfile{
+	// 	ManagedClusterUpgradeProfile: armcontainerservice.ManagedClusterUpgradeProfile{
 	// 		Name: to.Ptr("default"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters/upgradeprofiles"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/upgradeprofiles/default"),
@@ -7034,7 +7185,7 @@ func ExampleManagedClustersClient_GetUpgradeProfile() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersList.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersList.json
 func ExampleManagedClustersClient_NewListPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7118,7 +7269,7 @@ func ExampleManagedClustersClient_NewListPager() {
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersListByResourceGroup.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersListByResourceGroup.json
 func ExampleManagedClustersClient_NewListByResourceGroupPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7200,7 +7351,7 @@ func ExampleManagedClustersClient_NewListByResourceGroupPager() {
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersListClusterAdminCredentials.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersListClusterAdminCredentials.json
 func ExampleManagedClustersClient_ListClusterAdminCredentials() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7219,7 +7370,7 @@ func ExampleManagedClustersClient_ListClusterAdminCredentials() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientListClusterAdminCredentialsResponse{
-	// 	CredentialResults: &armcontainerservice.CredentialResults{
+	// 	CredentialResults: armcontainerservice.CredentialResults{
 	// 		Kubeconfigs: []*armcontainerservice.CredentialResult{
 	// 			{
 	// 				Name: to.Ptr("credentialName1"),
@@ -7230,7 +7381,7 @@ func ExampleManagedClustersClient_ListClusterAdminCredentials() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersListClusterCredentialResult.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersListClusterCredentialResult.json
 func ExampleManagedClustersClient_ListClusterMonitoringUserCredentials() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7249,7 +7400,7 @@ func ExampleManagedClustersClient_ListClusterMonitoringUserCredentials() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientListClusterMonitoringUserCredentialsResponse{
-	// 	CredentialResults: &armcontainerservice.CredentialResults{
+	// 	CredentialResults: armcontainerservice.CredentialResults{
 	// 		Kubeconfigs: []*armcontainerservice.CredentialResult{
 	// 			{
 	// 				Name: to.Ptr("credentialName1"),
@@ -7260,7 +7411,7 @@ func ExampleManagedClustersClient_ListClusterMonitoringUserCredentials() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersListClusterUserCredentials.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersListClusterUserCredentials.json
 func ExampleManagedClustersClient_ListClusterUserCredentials() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7279,7 +7430,7 @@ func ExampleManagedClustersClient_ListClusterUserCredentials() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientListClusterUserCredentialsResponse{
-	// 	CredentialResults: &armcontainerservice.CredentialResults{
+	// 	CredentialResults: armcontainerservice.CredentialResults{
 	// 		Kubeconfigs: []*armcontainerservice.CredentialResult{
 	// 			{
 	// 				Name: to.Ptr("credentialName1"),
@@ -7290,7 +7441,7 @@ func ExampleManagedClustersClient_ListClusterUserCredentials() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ListGuardrailsVersions.json
+// Generated from example definition: 2026-04-02-preview/ListGuardrailsVersions.json
 func ExampleManagedClustersClient_NewListGuardrailsVersionsPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7330,7 +7481,7 @@ func ExampleManagedClustersClient_NewListGuardrailsVersionsPager() {
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/KubernetesVersions_List.json
+// Generated from example definition: 2026-04-02-preview/KubernetesVersions_List.json
 func ExampleManagedClustersClient_ListKubernetesVersions() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7349,7 +7500,7 @@ func ExampleManagedClustersClient_ListKubernetesVersions() {
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientListKubernetesVersionsResponse{
-	// 	KubernetesVersionListResult: &armcontainerservice.KubernetesVersionListResult{
+	// 	KubernetesVersionListResult: armcontainerservice.KubernetesVersionListResult{
 	// 		Values: []*armcontainerservice.KubernetesVersion{
 	// 			{
 	// 				Capabilities: &armcontainerservice.KubernetesVersionCapabilities{
@@ -7439,7 +7590,7 @@ func ExampleManagedClustersClient_ListKubernetesVersions() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersList_MeshRevisionProfiles.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersList_MeshRevisionProfiles.json
 func ExampleManagedClustersClient_NewListMeshRevisionProfilesPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7512,7 +7663,7 @@ func ExampleManagedClustersClient_NewListMeshRevisionProfilesPager() {
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersList_MeshUpgradeProfiles.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersList_MeshUpgradeProfiles.json
 func ExampleManagedClustersClient_NewListMeshUpgradeProfilesPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7565,7 +7716,7 @@ func ExampleManagedClustersClient_NewListMeshUpgradeProfilesPager() {
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/OutboundNetworkDependenciesEndpointsList.json
+// Generated from example definition: 2026-04-02-preview/OutboundNetworkDependenciesEndpointsList.json
 func ExampleManagedClustersClient_NewListOutboundNetworkDependenciesEndpointsPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7822,7 +7973,7 @@ func ExampleManagedClustersClient_NewListOutboundNetworkDependenciesEndpointsPag
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ListSafeguardsVersions.json
+// Generated from example definition: 2026-04-02-preview/ListSafeguardsVersions.json
 func ExampleManagedClustersClient_NewListSafeguardsVersionsPager() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7862,7 +8013,7 @@ func ExampleManagedClustersClient_NewListSafeguardsVersionsPager() {
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/LoadBalancers_Rebalance.json
+// Generated from example definition: 2026-04-02-preview/LoadBalancers_Rebalance.json
 func ExampleManagedClustersClient_BeginRebalanceLoadBalancers() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7883,11 +8034,11 @@ func ExampleManagedClustersClient_BeginRebalanceLoadBalancers() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersResetAADProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersResetAADProfile.json
 func ExampleManagedClustersClient_BeginResetAADProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7909,7 +8060,7 @@ func ExampleManagedClustersClient_BeginResetAADProfile() {
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
@@ -7918,7 +8069,7 @@ func ExampleManagedClustersClient_BeginResetAADProfile() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersResetServicePrincipalProfile.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersResetServicePrincipalProfile.json
 func ExampleManagedClustersClient_BeginResetServicePrincipalProfile() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7938,7 +8089,7 @@ func ExampleManagedClustersClient_BeginResetServicePrincipalProfile() {
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
@@ -7947,7 +8098,7 @@ func ExampleManagedClustersClient_BeginResetServicePrincipalProfile() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersRotateClusterCertificates.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersRotateClusterCertificates.json
 func ExampleManagedClustersClient_BeginRotateClusterCertificates() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7964,11 +8115,11 @@ func ExampleManagedClustersClient_BeginRotateClusterCertificates() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersRotateServiceAccountSigningKeys.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersRotateServiceAccountSigningKeys.json
 func ExampleManagedClustersClient_BeginRotateServiceAccountSigningKeys() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -7985,11 +8136,11 @@ func ExampleManagedClustersClient_BeginRotateServiceAccountSigningKeys() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/RunCommandRequest.json
+// Generated from example definition: 2026-04-02-preview/RunCommandRequest.json
 func ExampleManagedClustersClient_BeginRunCommand() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -8010,13 +8161,13 @@ func ExampleManagedClustersClient_BeginRunCommand() {
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientRunCommandResponse{
-	// 	RunCommandResult: &armcontainerservice.RunCommandResult{
+	// 	RunCommandResult: armcontainerservice.RunCommandResult{
 	// 		ID: to.Ptr("def7b3ea71bd4f7e9d226ddbc0f00ad9"),
 	// 		Properties: &armcontainerservice.CommandResultProperties{
 	// 			ExitCode: to.Ptr[int32](0),
@@ -8029,7 +8180,7 @@ func ExampleManagedClustersClient_BeginRunCommand() {
 	// }
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersStart.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersStart.json
 func ExampleManagedClustersClient_BeginStart() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -8046,11 +8197,11 @@ func ExampleManagedClustersClient_BeginStart() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersStop.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersStop.json
 func ExampleManagedClustersClient_BeginStop() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -8067,11 +8218,11 @@ func ExampleManagedClustersClient_BeginStop() {
 	}
 	_, err = poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 }
 
-// Generated from example definition: 2026-02-02-preview/ManagedClustersUpdateTags.json
+// Generated from example definition: 2026-04-02-preview/ManagedClustersUpdateTags.json
 func ExampleManagedClustersClient_BeginUpdateTags() {
 	cred, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
@@ -8093,13 +8244,13 @@ func ExampleManagedClustersClient_BeginUpdateTags() {
 	}
 	res, err := poller.PollUntilDone(ctx, nil)
 	if err != nil {
-		log.Fatalf("failed to pull the result: %v", err)
+		log.Fatalf("failed to poll the result: %v", err)
 	}
 	// You could use response here. We use blank identifier for just demo purposes.
 	_ = res
 	// If the HTTP response code is 200 as defined in example definition, your response structure would look as follows. Please pay attention that all the values in the output are fake values for just demo purposes.
 	// res = armcontainerservice.ManagedClustersClientUpdateTagsResponse{
-	// 	ManagedCluster: &armcontainerservice.ManagedCluster{
+	// 	ManagedCluster: armcontainerservice.ManagedCluster{
 	// 		Name: to.Ptr("clustername1"),
 	// 		Type: to.Ptr("Microsoft.ContainerService/managedClusters"),
 	// 		ID: to.Ptr("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1"),

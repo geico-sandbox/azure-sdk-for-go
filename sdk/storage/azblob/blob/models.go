@@ -20,6 +20,28 @@ func NewSharedKeyCredential(accountName, accountKey string) (*SharedKeyCredentia
 	return exported.NewSharedKeyCredential(accountName, accountKey)
 }
 
+// ExpectContinueMode is the mode for applying the HTTP "Expect: 100-continue" header to
+// operations that include a request body.
+type ExpectContinueMode = exported.ExpectContinueMode
+
+const (
+	// ExpectContinueModeApplyOnThrottle indicates that Expect-Continue will not be applied
+	// until specific errors are encountered from the service, at which point it will be
+	// applied for a fixed window of time after the last triggering error. This is the default.
+	ExpectContinueModeApplyOnThrottle = exported.ExpectContinueModeApplyOnThrottle
+
+	// ExpectContinueModeOn indicates Expect-Continue will be applied regardless of recent
+	// error status. The ContentLengthThreshold option still applies.
+	ExpectContinueModeOn = exported.ExpectContinueModeOn
+
+	// ExpectContinueModeOff indicates Expect-Continue will never be applied.
+	ExpectContinueModeOff = exported.ExpectContinueModeOff
+)
+
+// ExpectContinueOptions configures the behavior for applying the HTTP "Expect: 100-continue"
+// header to operations that include a request body.
+type ExpectContinueOptions = exported.ExpectContinueOptions
+
 // Type Declarations ---------------------------------------------------------------------
 
 // AccessConditions identifies blob-specific access conditions which you optionally set.
@@ -69,6 +91,12 @@ type DownloadStreamOptions struct {
 	// Range specifies a range of bytes.  The default value is all bytes.
 	Range HTTPRange
 
+	// TransactionalValidation specifies the transfer validation type to use on download.
+	// When set to TransferValidationTypeComputeStructuredMessageCRC64, the service returns the
+	// blob data wrapped in a structured message with per-segment CRC64 checksums. The SDK
+	// automatically decodes the structured message and validates checksums before returning data.
+	TransactionalValidation TransferValidationType
+
 	AccessConditions *AccessConditions
 	CPKInfo          *CPKInfo
 	CPKScopeInfo     *CPKScopeInfo
@@ -79,9 +107,17 @@ func (o *DownloadStreamOptions) format() (*generated.BlobClientDownloadOptions, 
 		return nil, nil, nil, nil
 	}
 
+	var smHeader *string
+	if o.TransactionalValidation != nil {
+		if h := exported.GetStructuredBodyType(o.TransactionalValidation); h != "" {
+			smHeader = &h
+		}
+	}
+
 	basics := generated.BlobClientDownloadOptions{
 		RangeGetContentMD5: o.RangeGetContentMD5,
 		Range:              exported.FormatHTTPRange(o.Range),
+		StructuredBodyType: smHeader,
 	}
 
 	leaseAccessConditions, modifiedAccessConditions := exported.FormatBlobAccessConditions(o.AccessConditions)
@@ -108,11 +144,15 @@ type downloadOptions struct {
 	CPKInfo      *CPKInfo
 	CPKScopeInfo *CPKScopeInfo
 
-	// Concurrency indicates the maximum number of blocks to download in parallel (0=default).
+	// Concurrency indicates the maximum number of blocks to download in parallel.
+	// The default is based on CPU core count (min 8, max 96). Set AZURE_STORAGE_USE_LEGACY_DEFAULT_CONCURRENCY=true to revert to the previous default.
 	Concurrency uint16
 
 	// RetryReaderOptionsPerBlock is used when downloading each block.
 	RetryReaderOptionsPerBlock RetryReaderOptions
+
+	// TransactionalValidation specifies the transfer validation type to use on download.
+	TransactionalValidation TransferValidationType
 }
 
 func (o *downloadOptions) getBlobPropertiesOptions() *GetPropertiesOptions {
@@ -130,11 +170,12 @@ func (o *downloadOptions) getDownloadBlobOptions(rnge HTTPRange, rangeGetContent
 		return nil
 	}
 	return &DownloadStreamOptions{
-		AccessConditions:   o.AccessConditions,
-		CPKInfo:            o.CPKInfo,
-		CPKScopeInfo:       o.CPKScopeInfo,
-		Range:              rnge,
-		RangeGetContentMD5: rangeGetContentMD5,
+		AccessConditions:        o.AccessConditions,
+		CPKInfo:                 o.CPKInfo,
+		CPKScopeInfo:            o.CPKScopeInfo,
+		Range:                   rnge,
+		RangeGetContentMD5:      rangeGetContentMD5,
+		TransactionalValidation: o.TransactionalValidation,
 	}
 }
 
@@ -158,11 +199,15 @@ type DownloadBufferOptions struct {
 	// CPKScopeInfo contains a group of parameters for client provided encryption scope.
 	CPKScopeInfo *CPKScopeInfo
 
-	// Concurrency indicates the maximum number of blocks to download in parallel (0=default).
+	// Concurrency indicates the maximum number of blocks to download in parallel.
+	// The default is based on CPU core count (min 8, max 96). Set AZURE_STORAGE_USE_LEGACY_DEFAULT_CONCURRENCY=true to revert to the previous default.
 	Concurrency uint16
 
 	// RetryReaderOptionsPerBlock is used when downloading each block.
 	RetryReaderOptionsPerBlock RetryReaderOptions
+
+	// TransactionalValidation specifies the transfer validation type to use on download.
+	TransactionalValidation TransferValidationType
 }
 
 // DownloadFileOptions contains the optional parameters for the DownloadFile method.
@@ -183,11 +228,15 @@ type DownloadFileOptions struct {
 	CPKInfo      *CPKInfo
 	CPKScopeInfo *CPKScopeInfo
 
-	// Concurrency indicates the maximum number of blocks to download in parallel.  The default value is 5.
+	// Concurrency indicates the maximum number of blocks to download in parallel.
+	// The default is based on CPU core count (min 8, max 96). Set AZURE_STORAGE_USE_LEGACY_DEFAULT_CONCURRENCY=true to revert to the previous default.
 	Concurrency uint16
 
 	// RetryReaderOptionsPerBlock is used when downloading each block.
 	RetryReaderOptionsPerBlock RetryReaderOptions
+
+	// TransactionalValidation specifies the transfer validation type to use on download.
+	TransactionalValidation TransferValidationType
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

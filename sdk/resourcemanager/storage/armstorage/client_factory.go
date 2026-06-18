@@ -40,6 +40,14 @@ func (c *ClientFactory) NewAccountsClient() *AccountsClient {
 	}
 }
 
+// NewAdvancedPlatformMetricsClient creates a new instance of AdvancedPlatformMetricsClient.
+func (c *ClientFactory) NewAdvancedPlatformMetricsClient() *AdvancedPlatformMetricsClient {
+	return &AdvancedPlatformMetricsClient{
+		subscriptionID: c.subscriptionID,
+		internal:       c.internal,
+	}
+}
+
 // NewBlobContainersClient creates a new instance of BlobContainersClient.
 func (c *ClientFactory) NewBlobContainersClient() *BlobContainersClient {
 	return &BlobContainersClient{
@@ -59,6 +67,22 @@ func (c *ClientFactory) NewBlobInventoryPoliciesClient() *BlobInventoryPoliciesC
 // NewBlobServicesClient creates a new instance of BlobServicesClient.
 func (c *ClientFactory) NewBlobServicesClient() *BlobServicesClient {
 	return &BlobServicesClient{
+		subscriptionID: c.subscriptionID,
+		internal:       c.internal,
+	}
+}
+
+// NewConnectorsClient creates a new instance of ConnectorsClient.
+func (c *ClientFactory) NewConnectorsClient() *ConnectorsClient {
+	return &ConnectorsClient{
+		subscriptionID: c.subscriptionID,
+		internal:       c.internal,
+	}
+}
+
+// NewDataSharesClient creates a new instance of DataSharesClient.
+func (c *ClientFactory) NewDataSharesClient() *DataSharesClient {
+	return &DataSharesClient{
 		subscriptionID: c.subscriptionID,
 		internal:       c.internal,
 	}

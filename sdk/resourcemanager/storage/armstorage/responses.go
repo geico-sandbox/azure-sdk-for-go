@@ -107,6 +107,29 @@ type AccountsClientUpdateResponse struct {
 	Account
 }
 
+// AdvancedPlatformMetricsClientCreateOrUpdateResponse contains the response from method AdvancedPlatformMetricsClient.CreateOrUpdate.
+type AdvancedPlatformMetricsClientCreateOrUpdateResponse struct {
+	// The advanced platform metrics rule for the storage account.
+	AdvancedPlatformMetricsRule
+}
+
+// AdvancedPlatformMetricsClientDeleteResponse contains the response from method AdvancedPlatformMetricsClient.Delete.
+type AdvancedPlatformMetricsClientDeleteResponse struct {
+	// placeholder for future response values
+}
+
+// AdvancedPlatformMetricsClientGetResponse contains the response from method AdvancedPlatformMetricsClient.Get.
+type AdvancedPlatformMetricsClientGetResponse struct {
+	// The advanced platform metrics rule for the storage account.
+	AdvancedPlatformMetricsRule
+}
+
+// AdvancedPlatformMetricsClientListResponse contains the response from method AdvancedPlatformMetricsClient.NewListPager.
+type AdvancedPlatformMetricsClientListResponse struct {
+	// The response of a AdvancedPlatformMetricsRule list operation.
+	AdvancedPlatformMetricsRuleListResult
+}
+
 // BlobContainersClientClearLegalHoldResponse contains the response from method BlobContainersClient.ClearLegalHold.
 type BlobContainersClientClearLegalHoldResponse struct {
 	// The LegalHold property of a blob container.
@@ -247,6 +270,70 @@ type BlobServicesClientListResponse struct {
 type BlobServicesClientSetServicePropertiesResponse struct {
 	// The properties of a storage account’s Blob service.
 	BlobServiceProperties
+}
+
+// ConnectorsClientCreateResponse contains the response from method ConnectorsClient.BeginCreate.
+type ConnectorsClientCreateResponse struct {
+	// A Connector is a tracked ARM resource modeled as a sub-resource of a Storage Account.
+	Connector
+}
+
+// ConnectorsClientDeleteResponse contains the response from method ConnectorsClient.BeginDelete.
+type ConnectorsClientDeleteResponse struct {
+	// placeholder for future response values
+}
+
+// ConnectorsClientGetResponse contains the response from method ConnectorsClient.Get.
+type ConnectorsClientGetResponse struct {
+	// A Connector is a tracked ARM resource modeled as a sub-resource of a Storage Account.
+	Connector
+}
+
+// ConnectorsClientListByStorageAccountResponse contains the response from method ConnectorsClient.NewListByStorageAccountPager.
+type ConnectorsClientListByStorageAccountResponse struct {
+	// The response of a Connector list operation.
+	ConnectorListResult
+}
+
+// ConnectorsClientTestExistingConnectionResponse contains the response from method ConnectorsClient.BeginTestExistingConnection.
+type ConnectorsClientTestExistingConnectionResponse struct {
+	// Test connection response properties
+	TestConnectionResponse
+}
+
+// ConnectorsClientUpdateResponse contains the response from method ConnectorsClient.BeginUpdate.
+type ConnectorsClientUpdateResponse struct {
+	// A Connector is a tracked ARM resource modeled as a sub-resource of a Storage Account.
+	Connector
+}
+
+// DataSharesClientCreateResponse contains the response from method DataSharesClient.BeginCreate.
+type DataSharesClientCreateResponse struct {
+	// A DataShare is a tracked ARM resource modeled as a sub-resource of a Storage Account.
+	DataShare
+}
+
+// DataSharesClientDeleteResponse contains the response from method DataSharesClient.BeginDelete.
+type DataSharesClientDeleteResponse struct {
+	// placeholder for future response values
+}
+
+// DataSharesClientGetResponse contains the response from method DataSharesClient.Get.
+type DataSharesClientGetResponse struct {
+	// A DataShare is a tracked ARM resource modeled as a sub-resource of a Storage Account.
+	DataShare
+}
+
+// DataSharesClientListByStorageAccountResponse contains the response from method DataSharesClient.NewListByStorageAccountPager.
+type DataSharesClientListByStorageAccountResponse struct {
+	// The response of a DataShare list operation.
+	DataShareListResult
+}
+
+// DataSharesClientUpdateResponse contains the response from method DataSharesClient.BeginUpdate.
+type DataSharesClientUpdateResponse struct {
+	// A DataShare is a tracked ARM resource modeled as a sub-resource of a Storage Account.
+	DataShare
 }
 
 // DeletedAccountsClientGetResponse contains the response from method DeletedAccountsClient.Get.
@@ -610,6 +697,11 @@ type TaskAssignmentsClientGetResponse struct {
 type TaskAssignmentsClientListResponse struct {
 	// List of storage task assignments for the storage account
 	TaskAssignmentsList
+}
+
+// TaskAssignmentsClientStopAssignmentResponse contains the response from method TaskAssignmentsClient.BeginStopAssignment.
+type TaskAssignmentsClientStopAssignmentResponse struct {
+	// placeholder for future response values
 }
 
 // TaskAssignmentsClientUpdateResponse contains the response from method TaskAssignmentsClient.BeginUpdate.
